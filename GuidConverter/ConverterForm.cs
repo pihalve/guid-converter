@@ -19,7 +19,7 @@ public partial class ConverterForm : Form
         contextMenu.Items.AddRange(new ToolStripItem[] { menuItemGuidConverter, menuItemQuit });
 
         notifyIcon1.Text = Text;
-        notifyIcon1.Icon = new Icon("tennis_ball.ico");
+        notifyIcon1.Icon = Icon; //new Icon("tennis_ball.ico");
         notifyIcon1.ContextMenuStrip = contextMenu;
         notifyIcon1.MouseClick += NotifyIcon1_MouseClick;
         notifyIcon1.Visible = true;
@@ -91,18 +91,18 @@ public partial class ConverterForm : Form
         txtNormalGuid.SelectAll();
     }
 
-    private void MenuItemQuit_Click(object? sender, EventArgs e)
+    private void MenuItemQuit_Click(object sender, EventArgs e)
     {
         Application.Exit();
     }
 
-    private void MenuItemGuidConverter_Click(object? sender, EventArgs e)
+    private void MenuItemGuidConverter_Click(object sender, EventArgs e)
     {
         Visible = true;
         Activate();
     }
 
-    private void NotifyIcon1_MouseClick(object? sender, MouseEventArgs e)
+    private void NotifyIcon1_MouseClick(object sender, MouseEventArgs e)
     {
         if (e.Button == MouseButtons.Left)
         {

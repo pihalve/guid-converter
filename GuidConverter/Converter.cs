@@ -2,7 +2,7 @@
 
 public class Converter
 {
-    public ConversionResult? Convert(string input)
+    public ConversionResult Convert(string input)
     {
         if (!Guid.TryParse(input, out Guid inputGuid))
         {

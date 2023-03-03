@@ -29,6 +29,7 @@ partial class ConverterForm
     private void InitializeComponent()
     {
         components = new System.ComponentModel.Container();
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConverterForm));
         txtInputGuid = new TextBox();
         lblInputGuid = new Label();
         lblMongoDbGuid = new Label();
@@ -155,10 +156,10 @@ partial class ConverterForm
         Controls.Add(lblInputGuid);
         Controls.Add(txtInputGuid);
         FormBorderStyle = FormBorderStyle.FixedDialog;
+        Icon = (Icon)resources.GetObject("$this.Icon");
         MaximizeBox = false;
         MinimizeBox = false;
         Name = "ConverterForm";
-        ShowIcon = false;
         ShowInTaskbar = false;
         SizeGripStyle = SizeGripStyle.Hide;
         Text = "GUID Converter";
