@@ -19,7 +19,7 @@ public partial class ConverterForm : Form
         contextMenu.Items.AddRange(new ToolStripItem[] { menuItemGuidConverter, menuItemQuit });
 
         notifyIcon1.Text = Text;
-        notifyIcon1.Icon = Icon; //new Icon("tennis_ball.ico");
+        notifyIcon1.Icon = Icon;
         notifyIcon1.ContextMenuStrip = contextMenu;
         notifyIcon1.MouseClick += NotifyIcon1_MouseClick;
         notifyIcon1.Visible = true;
@@ -29,6 +29,7 @@ public partial class ConverterForm : Form
     {
         lblInputInvalid.Visible = false;
         //txtInputGuid.Text = "3c8534f4-39e3-422e-8adc-0002538d4a98";
+        Visible = false;
     }
 
     private void btnConvert_Click(object sender, EventArgs e)
@@ -46,7 +47,6 @@ public partial class ConverterForm : Form
             return;
         }
 
-        //MessageBox.Show("Invalid GUID format", "GUID Conversion Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         lblInputInvalid.Visible = true;
     }
 

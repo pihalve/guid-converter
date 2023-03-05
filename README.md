@@ -15,3 +15,10 @@ dotnet publish -c Release -r win-x64
 ```
 
 This will build an executable into `bin\Release\net6.0-windows\win-x64\publish`
+
+## Run on startup installation
+Grab the `GuidConverter.exe` file generated as described in "Build" section above and place it in an appropriate location. My suggestion would be this folder path: `C:\Program Files\Pihalve\GuidConverter\`
+
+Open location of Windows startup applications by pressing Win+R and type `shell:startup`. Generate a desktop shortcut and copy it here. Right-click the shortcut and select "Properties". In the "Destination" field append the argument `startup` to the executable path so that it looks something like this: `"C:\Program Files\Pihalve\GuidConverter\GuidConverter.exe" startup`. Click "OK" to save and close "Properties". Next time you start Windows, GuidConverter should be started automatically and reside in the tray area.
+
+If the icon disappears from the tray area, you can go into Windows taskbar overflow settings and toggle the button to have it always show the icon.
